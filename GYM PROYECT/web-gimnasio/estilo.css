@@ -1,0 +1,753 @@
+/* Importa la fuente 'Barlow' desde Google Fonts con diferentes pesos de fuente */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;400;600;800;900&display=swap');
+
+/* Establece estilos para todos los elementos del documento */
+*{
+    margin: 0; /* Elimina el margen exterior */
+    padding: 0; /* Elimina el relleno */
+    box-sizing: border-box; /* Incluye el borde y el relleno en el ancho y alto de los elementos */
+    font-family: 'Barlow'; /* Establece la fuente predeterminada para todo el documento */
+}
+
+/* Establece el comportamiento de desplazamiento suave para el HTML */
+html{
+    scroll-behavior: smooth; /* Hace que el desplazamiento en el HTML sea suave */
+}
+
+/* Establece el color de fondo para el cuerpo */
+body{
+    background-color: #dde1e9; /* Establece un color de fondo para el cuerpo */
+}
+
+/* Estilos para el encabezado y menú */
+/* Sección de Encabezado */
+.contenedor-header{
+    width: 100%; /* Establece el ancho del contenedor del encabezado al 100% */
+    position: fixed; /* Fija el encabezado en la parte superior de la ventana de visualización */
+    border-bottom: 1px solid #1f283e; /* Establece un borde inferior de 1px sólido con color específico */
+    background-color: rgba(0,0,0,.7); /* Establece un color de fondo semi-transparente para el encabezado */
+    z-index: 99; /* Establece la superposición z del encabezado */
+    padding: 0 20px; /* Agrega relleno a los lados del contenedor del encabezado */
+}
+
+/* Estilos para el contenido dentro del encabezado */
+.contenedor-header header{
+    max-width: 1100px; /* Establece el ancho máximo del contenido del encabezado */
+    margin: auto; /* Centra el contenido del encabezado */
+    width: 100%; /* Establece el ancho del contenido del encabezado al 100% */
+    display: flex; /* Usa un modelo de caja flexible para el contenido del encabezado */
+    justify-content: space-between; /* Distribuye uniformemente el espacio entre los elementos del encabezado */
+    align-items: center; /* Centra verticalmente los elementos del encabezado */
+    padding: 20px 0; /* Agrega relleno superior e inferior al contenido del encabezado */
+    color: #fff; /* Establece el color del texto del encabezado */
+}
+
+/* Estilos para los elementos de texto que deben ser de color rojo */
+.txtRojo{
+    color:#ff1133; /* Establece el color del texto en rojo */
+}
+
+/* Estilos para los enlaces dentro de la navegación del encabezado */
+.contenedor-header header nav a{
+    display: inline-block; /* Hace que los elementos de navegación sean en línea y tengan un bloque */
+    text-decoration: none; /* Elimina la decoración de subrayado de los enlaces */
+    color: #fff; /* Establece el color del texto de los enlaces */
+    padding: 5px; /* Agrega relleno a los lados de los enlaces */
+    text-transform: uppercase; /* Convierte el texto de los enlaces a mayúsculas */
+}
+
+/* Estilos para los enlaces de navegación del encabezado cuando se pasan por encima */
+.contenedor-header header nav a:hover{
+    color: #ff1133; /* Cambia el color del texto del enlace al pasar el cursor sobre él */
+}
+
+/* Estilos para los enlaces de redes sociales dentro del encabezado */
+.contenedor-header header .redes a{
+    text-decoration: none; /* Elimina la decoración de subrayado de los enlaces */
+    color: #fff; /* Establece el color del texto de los enlaces */
+    display: inline-block; /* Hace que los elementos de red sean en línea y tengan un bloque */
+    padding: 5px 8px; /* Agrega relleno a los lados de los enlaces de redes sociales */
+}
+
+/* Estilos para los enlaces de redes sociales dentro del encabezado cuando se pasan por encima */
+.contenedor-header header .redes a:hover{
+    color: #ff1133; /* Cambia el color del texto del enlace de redes sociales al pasar el cursor sobre él */
+}
+
+/* Estilos para el menú de navegación responsivo */
+.nav-responsive{
+    display: none; /* Oculta el menú de navegación responsivo de manera predeterminada */
+    font-size: 25px; /* Establece el tamaño de fuente del menú de navegación responsivo */
+}
+
+/* Estilos para la sección de inicio */
+/* Sección de Inicio */
+.inicio{
+    height: 100vh; /* Establece la altura de la sección de inicio al 100% del viewport */
+    background:linear-gradient(rgba(0, 1, 3, 0.5), rgba(0,0,0,.7)),url(img/fondo.jpg); /* Establece un fondo con un degradado y una imagen de fondo */
+    background-size: cover; /* Ajusta la imagen de fondo para cubrir toda la sección */
+    background-position: center center; /* Centra la imagen de fondo */
+    color: #fff; /* Establece el color de texto en blanco */
+    position: relative; /* Establece una posición relativa para los elementos secundarios */
+}
+
+/* Estilos para el contenido dentro de la sección de inicio */
+.inicio .contenido-seccion{
+    max-width: 1100px; /* Establece el ancho máximo del contenido */
+    margin: auto; /* Centra el contenido */
+}
+
+/* Estilos para la información dentro de la sección de inicio */
+.inicio .info{
+    width:fit-content; /* Ajusta el ancho del contenedor de información según el contenido */
+    margin: auto; /* Centra el contenedor de información */
+    position: absolute; /* Establece una posición absoluta para la información */
+    top:50%; /* Coloca la información en la mitad superior de la sección de inicio */
+    left: 50%; /* Coloca la información en el centro horizontal */
+    transform: translate(-50%,-50%); /* Centra vertical y horizontalmente la información */
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+/* Estilos para el título dentro de la sección de inicio */
+.inicio .info h2{
+    font-size: 4rem; /* Establece el tamaño de fuente del título */
+    letter-spacing: 3px; /* Ajusta el espaciado entre caracteres del título */
+}
+
+/* Estilos para los párrafos dentro de la información de la sección de inicio */
+.inicio .info p{
+    margin: 20px; /* Agrega un margen de 20px alrededor del párrafo */
+    color: #797e8e; /* Establece el color del texto del párrafo */
+    font-size: 16px; /* Establece el tamaño de fuente del párrafo */
+    letter-spacing: 3px; /* Ajusta el espaciado entre caracteres del párrafo */
+    text-transform: uppercase; /* Convierte el texto del párrafo a mayúsculas */
+}
+
+/* Estilos para el botón "más" dentro de la sección de inicio */
+.inicio .info .btn-mas{
+    width: 50px; /* Establece el ancho del botón a 50px */
+    margin: auto; /* Centra el botón horizontalmente */
+    height: 50px; /* Establece la altura del botón a 50px */
+    border: 2px solid #ff1133; /* Establece un borde sólido de 2px con color específico */
+    display: flex; /* Usa un modelo de caja flexible para el botón */
+    justify-content: center; /* Centra horizontalmente el contenido del botón */
+    align-items: center; /* Centra verticalmente el contenido del botón */
+    border-radius: 50%; /* Establece un borde redondeado al botón para que sea circular */
+    color: #ff1133; /* Establece el color del texto del botón */
+    margin-top: 50px; /* Agrega un margen superior de 50px al botón */
+    text-decoration: none; /* Elimina la decoración de subrayado del botón */
+}
+
+/* Estilos para las opciones dentro de la sección de inicio */
+.opciones{
+    position: absolute; /* Establece una posición absoluta para las opciones */
+    display: flex; /* Usa un modelo de caja flexible para las opciones */
+    justify-content: space-between; /* Distribuye uniformemente el espacio entre las opciones */
+    bottom: 30px; /* Coloca las opciones 30px desde la parte inferior */
+    left: 50%; /* Coloca las opciones en el centro horizontal */
+    transform: translateX(-50%); /* Centra horizontalmente las opciones */
+}
+
+/* Estilos para cada opción dentro de las opciones de la sección de inicio */
+.inicio .opciones .opcion{
+    border-top: 2px solid #797e8e; /* Establece un borde superior sólido de 2px con color específico */
+    padding: 7px; /* Agrega relleno alrededor de cada opción */
+    color: #797e8e; /* Establece el color del texto de las opciones */
+    margin: 0 20px; /* Agrega un margen horizontal de 20px a cada opción */
+}
+
+/* Estilos para la sección Nosotros */
+/* Sección Nosotros */
+.nosotros{
+    max-width: 1100px; /* Establece el ancho máximo de la sección Nosotros */
+    margin: auto; /* Centra la sección Nosotros horizontalmente */
+    height: 100vh; /* Establece la altura de la sección Nosotros al 100% del viewport */
+    background-color: #dde1e9; /* Establece un color de fondo para la sección Nosotros */
+    padding: 100px 20px; /* Agrega relleno superior e inferior y un poco de relleno a los lados de la sección Nosotros */
+}
+
+/* Estilos para las filas dentro de la sección Nosotros */
+.nosotros .fila{
+    display: flex; /* Usa un modelo de caja flexible para las filas */
+    align-items: center; /* Centra verticalmente los elementos dentro de las filas */
+}
+
+/* Estilos para las columnas dentro de las filas de la sección Nosotros */
+.nosotros .fila .col{
+    width: 50%; /* Establece el ancho de las columnas al 50% */
+}
+
+/* Estilos para las imágenes dentro de las columnas de la sección Nosotros */
+.nosotros .fila .col img{
+    width: 80%; /* Establece el ancho de las imágenes al 80% del contenedor */
+    display: block; /* Hace que las imágenes sean elementos de bloque */
+    margin: auto; /* Centra las imágenes horizontalmente */
+    margin-bottom: 50px; /* Agrega un margen inferior de 50px a las imágenes */
+}
+
+/* Estilos para los contenedores de títulos dentro de las columnas de la sección Nosotros */
+.nosotros .fila .col .contenedor-titulo{
+    display: flex; /* Usa un modelo de caja flexible para los contenedores de títulos */
+    align-items:center; /* Centra verticalmente los elementos dentro de los contenedores de títulos */
+}
+
+/* Estilos para los números dentro de los contenedores de títulos de la sección Nosotros */
+.nosotros .fila .col .contenedor-titulo .numero{
+    color: #ff1133; /* Establece el color del texto de los números */
+    font-weight: bold; /* Establece el peso de fuente en negrita para los números */
+    display: block; /* Hace que los números sean elementos de bloque */
+    font-size: 5rem; /* Establece el tamaño de fuente de los números */
+}
+
+/* Estilos para la información dentro del contenedor de título en las columnas de la sección Nosotros */
+.nosotros .fila .col .contenedor-titulo .info{
+    margin-left: 30px; /* Agrega un margen a la izquierda de la información */
+}
+
+/* Estilos para la frase dentro de la información en las columnas de la sección Nosotros */
+.nosotros .fila .col .contenedor-titulo .info .frase{
+    color: #ff1133; /* Establece el color de la frase en rojo */
+}
+
+/* Estilos para el título h2 dentro de la información en las columnas de la sección Nosotros */
+.nosotros .fila .col .contenedor-titulo .info h2{
+    font-size: 3rem; /* Establece el tamaño de fuente del título h2 */
+}
+
+/* Estilos para los párrafos dentro de las columnas de la sección Nosotros */
+.nosotros .fila .col p{
+   margin-bottom: 10px; /* Agrega un margen inferior de 10px a los párrafos */
+   line-height: 28px; /* Establece la altura de línea de los párrafos */
+}
+
+/* Estilos para los párrafos especiales dentro de las columnas de la sección Nosotros */
+.nosotros .fila .col .p-especial{
+    font-weight: bold; /* Establece el peso de fuente en negrita para los párrafos especiales */
+}
+
+/* Estilos para las líneas horizontales dentro de la sección Nosotros */
+.nosotros hr{
+    margin-bottom: 30px; /* Agrega un margen inferior de 30px a las líneas horizontales */
+}
+
+/* Estilos para las filas dentro de la sección Nosotros */
+.nosotros .fila-nosotros{
+    display: flex; /* Usa un modelo de caja flexible para las filas */
+    justify-content: space-between; /* Distribuye uniformemente el espacio entre los elementos de la fila */
+    align-items: center; /* Centra verticalmente los elementos de la fila */
+}
+
+/* Estilos para la frase dentro de las filas de la sección Nosotros */
+.nosotros .fila-nosotros .frase{
+    font-size: 18px; /* Establece el tamaño de fuente de la frase */
+    font-weight: 600; /* Establece el peso de fuente en negrita para la frase */
+}
+
+/* Estilos para el título h2 dentro de las filas de la sección Nosotros */
+.nosotros .fila-nosotros h2{
+    font-size: 2.5rem; /* Establece el tamaño de fuente del título h2 */
+}
+
+/* Estilos para los botones dentro de las filas de la sección Nosotros */
+.nosotros .fila-nosotros button{
+    background-color: #ff1133; /* Establece el color de fondo del botón */
+    border: none; /* Elimina el borde del botón */
+    color: #fff; /* Establece el color del texto del botón */
+    padding: 15px 35px; /* Agrega relleno alrededor del texto del botón */
+    font-size: 14px; /* Establece el tamaño de fuente del texto del botón */
+    letter-spacing: 3px; /* Ajusta el espaciado entre caracteres del texto del botón */
+    font-weight: bold; /* Establece el peso de fuente en negrita para el texto del botón */
+    border-radius: 5px; /* Establece un borde redondeado para el botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+/* ********** */
+/* SERVICIOS */
+/* ********** */
+
+.servicios{
+    color: #fff;
+    position: relative;
+}
+.servicios .contenido-seccion{
+    background:linear-gradient( rgba(0, 14, 41, 0.6), rgba(0, 7, 78, 0.7)),url(img/fondo-servicios.jpg);
+    background-size: cover;
+    background-position: center center;
+    margin: auto;
+    padding: 0 20px;
+}
+.servicios .contenido-seccion .fila{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+}
+.servicios .contenido-seccion .fila .col{
+    width: 50%;
+}
+.servicios .contenido-seccion .fila .col img{
+    display: block;
+    width: 50%;
+    margin: auto;
+}
+.servicios .fila .col .contenedor-titulo{
+    display: flex;
+    align-items: center;
+}
+.servicios .fila .col .contenedor-titulo .numero{
+    color: #ff1133;
+    font-weight: bold;
+    display: block;
+    font-size: 5rem;
+}
+.servicios .fila .col .contenedor-titulo .info{
+    margin-left: 30px;
+}
+.servicios .fila .col .contenedor-titulo .info .frase{
+    color: #ff1133;
+}
+.servicios .fila .col .contenedor-titulo .info h2{
+    font-size: 3rem;
+}
+.servicios .fila .col p{
+   margin-bottom: 10px;
+   line-height: 28px;
+}
+.servicios .fila .col .p-especial{
+    font-weight: bold;
+}
+.servicios .info-servicios{
+    max-width: 800px;
+    margin: auto;
+}
+.servicios .info-servicios table{
+    text-align: center;
+    background-color: #fff;
+    color: #1f283e;
+    border-collapse: collapse;
+    position: relative;
+    bottom: 100px;
+}
+.servicios .info-servicios table td{
+    padding: 30px;
+    border: 1px solid #dde1e9
+}
+.servicios .info-servicios table td i{
+    color: #ff1133;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+
+}
+.servicios .info-servicios h3{
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.servicios .info-servicios p{
+    line-height: 30px;
+}
+/* *********** */
+/* COMODIDADES */
+/* *********** */
+.comodidades{
+    max-width: 1100px;
+    margin: auto;
+    background-color: #dde1e9;
+    padding: 100px 20px;
+}
+.comodidades .fila{
+    display: flex;
+    align-items: center;
+}
+.comodidades .fila .col{
+    width: 50%;
+}
+.comodidades .fila .col img{
+    width: 80%;
+    display: block;
+    margin: auto;
+    margin-bottom: 50px;
+}
+.comodidades .fila .col .contenedor-titulo{
+    display: flex;
+    align-items:center
+}
+.comodidades .fila .col .contenedor-titulo .numero{
+    color: #ff1133;
+    font-weight: bold;
+    display: block;
+    font-size: 5rem;
+}
+.comodidades .fila .col .contenedor-titulo .info{
+    margin-left: 30px;
+}
+.comodidades .fila .col .contenedor-titulo .info .frase{
+    color: #ff1133;
+}
+.comodidades .fila .col .contenedor-titulo .info h2{
+    font-size: 3rem;
+}
+.comodidades .fila .col p{
+   margin-bottom: 10px;
+   line-height: 28px;
+}
+.comodidades .fila .col .p-especial{
+    font-weight: bold;
+}
+.comodidades .fila .col li{
+    margin-bottom: 20px;
+    color: #1f283e;
+}
+.comodidades .fila .col li span{
+    font-weight: bold;
+    color: #ff1133;
+}
+/* ********** */
+/* GALERIA */
+/* ********** */
+.galeria{
+    color: #fff;
+    background:linear-gradient( rgba(0, 14, 41, 0.6), rgba(0, 7, 78, 0.7)),url(img/fondo-galeria.jpg);
+    background-size: cover;
+    background-position: center center;
+    padding: 100px 0;
+}
+.galeria .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+.galeria .contenedor-titulo{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.galeria  .contenedor-titulo .numero{
+    color: #ff1133;
+    font-weight: bold;
+    display: block;
+    font-size: 5rem;
+}
+.galeria .contenedor-titulo .info{
+    margin-left: 30px;
+}
+.galeria .contenedor-titulo .info .frase{
+    color: #ff1133;
+}
+.galeria .contenedor-titulo .info h2{
+    font-size: 3rem;
+}
+.galeria .fila{
+    display: flex;
+}
+.galeria .fila .col img{
+    width: 100%;
+    display: block;
+}
+/* *********** */
+/* ENTRENADORES */
+/* *********** */
+.equipo{
+    max-width: 1100px;
+    margin: auto;
+    padding-top: 95px;
+    background-color: #dde1e9;
+}
+.equipo .contenedor-titulo{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin: auto;
+}
+.equipo  .contenedor-titulo .numero{
+    color: #ff1133;
+    font-weight: bold;
+    display: block;
+    font-size: 5rem;
+}
+.equipo .contenedor-titulo .info{
+    margin-left: 30px;
+}
+.equipo .contenedor-titulo .info .frase{
+    color: #ff1133;
+}
+.equipo .contenedor-titulo .info h2{
+    font-size: 3rem;
+}
+.equipo .fila{
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-around;
+}
+.equipo .fila .col{
+    width: 25%;
+}
+.equipo .fila .col img{
+   max-height: 400px;
+   display: block;
+   margin: auto;
+}
+.equipo .fila .info{
+    border: 5px solid #1f283e;
+    text-align: center;
+    border-radius: 5px;
+    padding: 20px;
+    background: linear-gradient(#ff1133, #9a0e23);
+    color: #fff;
+}
+.equipo .fila .info p{
+    margin: 20px 0;
+}
+.equipo .fila .info a{
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 20px;
+    font-size: 20px;
+}
+/* *********** */
+/* CONTACTO */
+/* *********** */
+.contacto{
+    color: #fff;
+    background:linear-gradient( rgba(0, 14, 41, 0.6), rgba(0, 7, 78, 0.7)),url(img/fondo.jpg);
+    background-size: cover;
+    background-position: center center;
+    padding: 100px 20px;
+
+}
+.contacto .contenido-seccion{
+    max-width: 800px;
+    margin: auto;
+}
+
+.contacto .contenedor-titulo{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin: auto;
+}
+.contacto  .contenedor-titulo .numero{
+    color: #ff1133;
+    font-weight: bold;
+    display: block;
+    font-size: 5rem;
+}
+.contacto .contenedor-titulo .info{
+    margin-left: 30px;
+}
+.contacto .contenedor-titulo .info .frase{
+    color: #ff1133;
+}
+.contacto .contenedor-titulo .info h2{
+    font-size: 3rem;
+}
+.contacto .fila{
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-between;
+}
+.contacto .fila .col{
+    width: 48%;
+}
+.contacto .fila input{
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    outline: none;
+}
+.contacto textarea{
+    display: block;
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 20px;
+    outline: none;
+    width: 100%;
+    height: 200px;
+}
+
+.contacto button{
+    display: block;
+    width: fit-content;
+    margin: auto;
+    margin-top: 30px;
+    border: none;
+    background-color: #ff1133;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.contacto .fila-datos{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    font-size: 18px;
+    text-align: center;
+}
+.contacto i{
+    color: #ff1133;
+    display: inline-block;
+    margin-right: 10px;
+}
+/* *********** */
+/* FOOTER */
+/* *********** */
+footer{
+    background-color: #151623;
+    padding: 30px 0;
+}
+footer .info{
+    display: flex;
+    max-width: 1100px;
+    margin: auto;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+footer .info p{
+    color: #797e8e;
+}
+footer .info a{
+    text-decoration: none;
+    color: #797e8e;
+    display: inline-block;
+    margin: 0 15px;
+}
+/* *********** */
+/* RESPONSIVE */
+/* *********** */
+@media only screen and (max-width: 900px) {
+    header nav{
+        position: initial;
+        display: none;
+        transform: translate(0);
+    }
+    header .redes{
+        display: none;
+    }
+    .nav-responsive{
+        display: block;
+    }
+    nav.responsive{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position:absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color:#151623;
+        z-index: 99;
+    }
+    nav.responsive a{
+        display: block;
+        width: fit-content;
+        margin: 10px auto;
+        font-size: 30px;
+    }
+    .inicio .opciones{
+        display: none;
+    }
+    .nosotros .fila{
+        display: block;
+    }
+    .nosotros .fila .col{
+        width: 100%;
+        margin: auto;
+    }
+    .nosotros .fila .col img{
+        max-width: 200px;
+        display: block;
+        margin: auto;
+    }
+    .servicios .contenido-seccion .fila{
+        display: block;
+    }
+    .servicios .contenido-seccion .fila .col{
+       width: 100%;
+    }
+    .comodidades .fila{
+        display: block;
+    }
+    .comodidades .fila .col{
+        width: 100%;
+    }
+    .comodidades .fila .col img{
+        max-width: 200px;
+    }
+
+    .equipo .fila{
+        display: block;
+    }
+    .equipo .fila .col{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .equipo .fila .col img{
+        max-height: 200px;
+    }
+    .equipo .fila .info{
+        max-width: 250px;
+        margin: auto;
+    }
+    .contacto .fila{
+        display: block;
+    }
+    .contacto .fila .col{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .contacto .fila-datos{
+        display: block;
+    }
+    .contacto .fila-datos .col{
+        margin-bottom: 20px;
+    }
+    footer .info{
+        display: block;
+        text-align: center;
+    }
+    footer .info p{
+        margin-bottom: 10px;
+    }
+}
+
+/* Estilos para el contenedor del inicio de sesión */
+.inicio-sesion {
+    float: right; /* Alinear a la derecha */
+    margin-top: 20px; /* Espacio superior */
+}
+
+/* Estilos para los enlaces de inicio de sesión */
+.inicio-sesion a {
+    margin-left: 20px; /* Espacio entre enlaces */
+    text-decoration: none; /* Sin subrayado */
+    color: #fff; /* Color del texto */
+    font-size: 16px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    transition: color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+.inicio-sesion a:hover {
+    color: #ff0000; /* Cambio de color al pasar el ratón */
+}
+
+/* Estilos para el botón de inicio de sesión */
+.inicio-sesion button {
+    background-color: #ff0000; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espacio interno */
+    font-size: 16px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    cursor: pointer; /* Cambio de cursor al pasar el ratón */
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color de fondo */
+}
+
+.inicio-sesion button:hover {
+    background-color: #d60000; /* Cambio de color de fondo al pasar el ratón */
+}
